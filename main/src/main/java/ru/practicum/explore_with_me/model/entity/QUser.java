@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.model.q;
+package ru.practicum.explore_with_me.model.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -7,7 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
-import ru.practicum.exploreWithMe.model.User;
+import ru.practicum.explore_with_me.model.User;
 
 
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")

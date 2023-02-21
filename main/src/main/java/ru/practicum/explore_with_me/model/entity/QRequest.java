@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.model.q;
+package ru.practicum.explore_with_me.model.entity;;
 
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.PathMetadata;
@@ -8,8 +8,8 @@ import com.querydsl.core.types.dsl.EntityPathBase;
 import com.querydsl.core.types.dsl.EnumPath;
 import com.querydsl.core.types.dsl.NumberPath;
 import com.querydsl.core.types.dsl.PathInits;
-import ru.practicum.exploreWithMe.model.Request;
-import ru.practicum.exploreWithMe.model.Status;
+import ru.practicum.explore_with_me.model.Request;
+import ru.practicum.explore_with_me.model.Status;
 
 import java.time.LocalDateTime;
 

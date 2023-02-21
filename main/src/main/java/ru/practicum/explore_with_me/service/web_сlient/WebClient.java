@@ -1,14 +1,14 @@
-package ru.practicum.exploreWithMe.service.webClient;
+package ru.practicum.explore_with_me.service.web_сlient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import ru.practicum.exploreWithMe.model.dto.*;
-import ru.practicum.exploreWithMe.model.dto.event.EventDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventFullDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventShortDto;
+import ru.practicum.explore_with_me.model.dto.*;
+import ru.practicum.explore_with_me.model.dto.event.EventDto;
+import ru.practicum.explore_with_me.model.dto.event.EventFullDto;
+import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

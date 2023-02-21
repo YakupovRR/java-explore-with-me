@@ -1,9 +1,9 @@
-package ru.practicum.exploreWithMe.model.mapper;
+package ru.practicum.explore_with_me.model.mapper;
 
 import org.springframework.stereotype.Component;
-import ru.practicum.exploreWithMe.model.Request;
-import ru.practicum.exploreWithMe.model.dto.request.RequestDto;
-import ru.practicum.exploreWithMe.model.dto.request.RequestsUpdResult;
+import ru.practicum.explore_with_me.model.Request;
+import ru.practicum.explore_with_me.model.dto.request.RequestDto;
+import ru.practicum.explore_with_me.model.dto.request.RequestsUpdResult;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.exception;
+package ru.practicum.explore_with_me.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import java.util.List;
 
-@RestControllerAdvice("ru.practicum.exploreWithMe.controller")
+@RestControllerAdvice("ru.practicum.explore_with_me.controller")
 @Slf4j
 public class Handler {
 

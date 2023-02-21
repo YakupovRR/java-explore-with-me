@@ -1,8 +1,8 @@
-package ru.practicum.exploreWithMe.model.dto.event;
+package ru.practicum.explore_with_me.model.dto.event;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import ru.practicum.exploreWithMe.model.dto.UserDto;
+import ru.practicum.explore_with_me.model.dto.UserDto;
 
 import java.time.LocalDateTime;
 

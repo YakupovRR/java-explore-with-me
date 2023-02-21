@@ -1,9 +1,9 @@
-package ru.practicum.exploreWithMe.model;
+package ru.practicum.explore_with_me.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.practicum.exploreWithMe.model.event.Event;
+import ru.practicum.explore_with_me.model.event.Event;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

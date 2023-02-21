@@ -1,8 +1,8 @@
-package ru.practicum.exploreWithMe.model.dto;
+package ru.practicum.explore_with_me.model.dto;
 
 import lombok.Data;
-import ru.practicum.exploreWithMe.model.dto.validation.Create;
-import ru.practicum.exploreWithMe.model.dto.validation.Update;
+import ru.practicum.explore_with_me.model.dto.validation.Create;
+import ru.practicum.explore_with_me.model.dto.validation.Update;
 
 import javax.validation.constraints.NotBlank;
 

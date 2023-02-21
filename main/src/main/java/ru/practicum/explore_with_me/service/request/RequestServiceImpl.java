@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.service.request;
+package ru.practicum.explore_with_me.service.request;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,17 +7,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.practicum.exploreWithMe.exception.ConflictException;
-import ru.practicum.exploreWithMe.exception.NotFoundException;
-import ru.practicum.exploreWithMe.model.*;
-import ru.practicum.exploreWithMe.model.dto.request.RequestsUpdate;
-import ru.practicum.exploreWithMe.model.dto.request.RequestsUpdResult;
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.event.EventState;
-import ru.practicum.exploreWithMe.model.mapper.RequestMapper;
-import ru.practicum.exploreWithMe.repository.EventRepository;
-import ru.practicum.exploreWithMe.repository.RequestRepository;
-import ru.practicum.exploreWithMe.repository.UserRepository;
+import ru.practicum.explore_with_me.exception.ConflictException;
+import ru.practicum.explore_with_me.exception.NotFoundException;
+import ru.practicum.explore_with_me.model.*;
+import ru.practicum.explore_with_me.model.dto.request.RequestsUpdate;
+import ru.practicum.explore_with_me.model.dto.request.RequestsUpdResult;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.event.EventState;
+import ru.practicum.explore_with_me.model.mapper.RequestMapper;
+import ru.practicum.explore_with_me.repository.EventRepository;
+import ru.practicum.explore_with_me.repository.RequestRepository;
+import ru.practicum.explore_with_me.repository.UserRepository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

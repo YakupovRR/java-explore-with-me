@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.model.dto.validation;
+package ru.practicum.explore_with_me.model.dto.validation;
 
 public interface Create {
 }

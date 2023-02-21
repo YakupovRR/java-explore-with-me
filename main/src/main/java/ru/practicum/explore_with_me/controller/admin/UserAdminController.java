@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.controller.admin;
+package ru.practicum.explore_with_me.controller.admin;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,9 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.dto.UserDto;
-import ru.practicum.exploreWithMe.model.mapper.UserMapper;
-import ru.practicum.exploreWithMe.service.user.UserService;
+import ru.practicum.explore_with_me.model.dto.UserDto;
+import ru.practicum.explore_with_me.model.mapper.UserMapper;
+import ru.practicum.explore_with_me.service.user.UserService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;

@@ -1,10 +1,10 @@
-package ru.practicum.exploreWithMe.service.event;
+package ru.practicum.explore_with_me.service.event;
 
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.StateAction;
-import ru.practicum.exploreWithMe.model.dto.event.EventDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventShortDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventUserDto;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.StateAction;
+import ru.practicum.explore_with_me.model.dto.event.EventDto;
+import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
+import ru.practicum.explore_with_me.model.dto.event.EventUserDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

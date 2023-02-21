@@ -1,10 +1,10 @@
-package ru.practicum.exploreWithMe.model.mapper;
+package ru.practicum.explore_with_me.model.mapper;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import ru.practicum.exploreWithMe.model.Compilation;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationInDto;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationDto;
+import ru.practicum.explore_with_me.model.Compilation;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationInDto;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationDto;
 
 import java.util.stream.Collectors;
 

@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.controller.privat;
+package ru.practicum.explore_with_me.controller.privat;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,12 +6,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.Status;
-import ru.practicum.exploreWithMe.model.dto.request.RequestDto;
-import ru.practicum.exploreWithMe.model.dto.request.RequestsUpdate;
-import ru.practicum.exploreWithMe.model.dto.request.RequestsUpdResult;
-import ru.practicum.exploreWithMe.model.mapper.RequestMapper;
-import ru.practicum.exploreWithMe.service.request.RequestService;
+import ru.practicum.explore_with_me.model.Status;
+import ru.practicum.explore_with_me.model.dto.request.RequestDto;
+import ru.practicum.explore_with_me.model.dto.request.RequestsUpdate;
+import ru.practicum.explore_with_me.model.dto.request.RequestsUpdResult;
+import ru.practicum.explore_with_me.model.mapper.RequestMapper;
+import ru.practicum.explore_with_me.service.request.RequestService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

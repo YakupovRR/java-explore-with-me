@@ -1,11 +1,11 @@
-package ru.practicum.exploreWithMe.model.event;
+package ru.practicum.explore_with_me.model.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.practicum.exploreWithMe.model.Category;
-import ru.practicum.exploreWithMe.model.User;
+import ru.practicum.explore_with_me.model.Category;
+import ru.practicum.explore_with_me.model.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.model.q;
+package ru.practicum.explore_with_me.model.entity;;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -8,8 +8,8 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.event.EventState;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.event.EventState;
 
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QEvent extends EntityPathBase<Event> {

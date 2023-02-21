@@ -1,6 +1,6 @@
-package ru.practicum.exploreWithMe.service.category;
+package ru.practicum.explore_with_me.service.category;
 
-import ru.practicum.exploreWithMe.model.Category;
+import ru.practicum.explore_with_me.model.Category;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.model.event;
+package ru.practicum.explore_with_me.model.event;
 
 import lombok.Data;
 

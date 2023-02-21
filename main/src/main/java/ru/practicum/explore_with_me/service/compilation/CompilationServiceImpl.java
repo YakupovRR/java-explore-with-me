@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.service.compilation;
+package ru.practicum.explore_with_me.service.compilation;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,14 +8,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
-import ru.practicum.exploreWithMe.exception.NotFoundException;
-import ru.practicum.exploreWithMe.model.Compilation;
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationDto;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationInDto;
-import ru.practicum.exploreWithMe.model.mapper.CompilationMapper;
-import ru.practicum.exploreWithMe.repository.CompilationRepository;
-import ru.practicum.exploreWithMe.repository.EventRepository;
+import ru.practicum.explore_with_me.exception.NotFoundException;
+import ru.practicum.explore_with_me.model.Compilation;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationDto;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationInDto;
+import ru.practicum.explore_with_me.model.mapper.CompilationMapper;
+import ru.practicum.explore_with_me.repository.CompilationRepository;
+import ru.practicum.explore_with_me.repository.EventRepository;
 
 import java.util.*;
 

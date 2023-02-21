@@ -1,6 +1,6 @@
-package ru.practicum.exploreWithMe.service.user;
+package ru.practicum.explore_with_me.service.user;
 
-import ru.practicum.exploreWithMe.model.User;
+import ru.practicum.explore_with_me.model.User;
 
 import java.util.List;
 

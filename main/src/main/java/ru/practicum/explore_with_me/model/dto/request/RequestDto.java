@@ -1,7 +1,7 @@
-package ru.practicum.exploreWithMe.model.dto.request;
+package ru.practicum.explore_with_me.model.dto.request;
 
 import lombok.Data;
-import ru.practicum.exploreWithMe.model.Status;
+import ru.practicum.explore_with_me.model.Status;
 
 import java.time.LocalDateTime;
 

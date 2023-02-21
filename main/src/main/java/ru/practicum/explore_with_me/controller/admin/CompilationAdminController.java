@@ -1,14 +1,14 @@
-package ru.practicum.exploreWithMe.controller.admin;
+package ru.practicum.explore_with_me.controller.admin;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationDto;
-import ru.practicum.exploreWithMe.model.dto.compilation.CompilationInDto;
-import ru.practicum.exploreWithMe.model.mapper.CompilationMapper;
-import ru.practicum.exploreWithMe.service.compilation.CompilationService;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationDto;
+import ru.practicum.explore_with_me.model.dto.compilation.CompilationInDto;
+import ru.practicum.explore_with_me.model.mapper.CompilationMapper;
+import ru.practicum.explore_with_me.service.compilation.CompilationService;
 
 import javax.validation.Valid;
 

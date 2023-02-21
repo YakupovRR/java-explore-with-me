@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.controller.privat;
+package ru.practicum.explore_with_me.controller.privat;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,14 +6,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.dto.event.EventDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventNewDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventUpdDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventUserDto;
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.StateAction;
-import ru.practicum.exploreWithMe.model.mapper.EventMapper;
-import ru.practicum.exploreWithMe.service.event.EventService;
+import ru.practicum.explore_with_me.model.dto.event.EventDto;
+import ru.practicum.explore_with_me.model.dto.event.EventNewDto;
+import ru.practicum.explore_with_me.model.dto.event.EventUpdDto;
+import ru.practicum.explore_with_me.model.dto.event.EventUserDto;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.StateAction;
+import ru.practicum.explore_with_me.model.mapper.EventMapper;
+import ru.practicum.explore_with_me.service.event.EventService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;

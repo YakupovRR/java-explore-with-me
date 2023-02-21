@@ -1,12 +1,12 @@
-package ru.practicum.exploreWithMe.controller.publi;
+package ru.practicum.explore_with_me.controller.publi;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.dto.CategoryDto;
-import ru.practicum.exploreWithMe.model.mapper.CategoryMapper;
-import ru.practicum.exploreWithMe.service.category.CategoryService;
+import ru.practicum.explore_with_me.model.dto.CategoryDto;
+import ru.practicum.explore_with_me.model.mapper.CategoryMapper;
+import ru.practicum.explore_with_me.service.category.CategoryService;
 
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;

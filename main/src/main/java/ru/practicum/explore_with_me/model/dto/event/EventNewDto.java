@@ -1,8 +1,8 @@
-package ru.practicum.exploreWithMe.model.dto.event;
+package ru.practicum.explore_with_me.model.dto.event;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-import ru.practicum.exploreWithMe.model.dto.LocationDto;
+import ru.practicum.explore_with_me.model.dto.LocationDto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

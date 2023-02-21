@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.service.user;
+package ru.practicum.explore_with_me.service.user;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,9 +7,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.practicum.exploreWithMe.exception.NotFoundException;
-import ru.practicum.exploreWithMe.model.User;
-import ru.practicum.exploreWithMe.repository.UserRepository;
+import ru.practicum.explore_with_me.exception.NotFoundException;
+import ru.practicum.explore_with_me.model.User;
+import ru.practicum.explore_with_me.repository.UserRepository;
 
 import java.util.Arrays;
 import java.util.List;

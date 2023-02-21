@@ -1,11 +1,11 @@
-package ru.practicum.exploreWithMe.model.mapper;
+package ru.practicum.explore_with_me.model.mapper;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import ru.practicum.exploreWithMe.model.Category;
-import ru.practicum.exploreWithMe.model.dto.event.*;
-import ru.practicum.exploreWithMe.model.event.Event;
-import ru.practicum.exploreWithMe.model.dto.*;
+import ru.practicum.explore_with_me.model.Category;
+import ru.practicum.explore_with_me.model.dto.event.*;
+import ru.practicum.explore_with_me.model.event.Event;
+import ru.practicum.explore_with_me.model.dto.*;
 
 import java.util.List;
 import java.util.stream.Collectors;

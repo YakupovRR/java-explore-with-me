@@ -1,13 +1,13 @@
-package ru.practicum.exploreWithMe.controller.publi;
+package ru.practicum.explore_with_me.controller.publi;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.exploreWithMe.model.dto.event.EventDto;
-import ru.practicum.exploreWithMe.model.dto.event.EventShortDto;
-import ru.practicum.exploreWithMe.service.event.EventService;
+import ru.practicum.explore_with_me.model.dto.event.EventDto;
+import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
+import ru.practicum.explore_with_me.service.event.EventService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.Positive;

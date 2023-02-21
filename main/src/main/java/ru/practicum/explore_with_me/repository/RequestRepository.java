@@ -1,10 +1,10 @@
-package ru.practicum.exploreWithMe.repository;
+package ru.practicum.explore_with_me.repository;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import ru.practicum.exploreWithMe.model.Request;
-import ru.practicum.exploreWithMe.model.Status;
+import ru.practicum.explore_with_me.model.Request;
+import ru.practicum.explore_with_me.model.Status;
 
 import java.util.List;
 

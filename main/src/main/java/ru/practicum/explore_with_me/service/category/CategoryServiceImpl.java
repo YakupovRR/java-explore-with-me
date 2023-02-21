@@ -1,4 +1,4 @@
-package ru.practicum.exploreWithMe.service.category;
+package ru.practicum.explore_with_me.service.category;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,11 +7,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.practicum.exploreWithMe.exception.ConflictException;
-import ru.practicum.exploreWithMe.exception.NotFoundException;
-import ru.practicum.exploreWithMe.model.Category;
-import ru.practicum.exploreWithMe.repository.CategoryRepository;
-import ru.practicum.exploreWithMe.repository.EventRepository;
+import ru.practicum.explore_with_me.exception.ConflictException;
+import ru.practicum.explore_with_me.exception.NotFoundException;
+import ru.practicum.explore_with_me.model.Category;
+import ru.practicum.explore_with_me.repository.CategoryRepository;
+import ru.practicum.explore_with_me.repository.EventRepository;
 
 import java.util.List;
 
