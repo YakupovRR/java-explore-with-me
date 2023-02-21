@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import ru.practicum.explore_with_me.model.dto.*;
 import ru.practicum.explore_with_me.model.dto.event.EventDto;
+import ru.practicum.explore_with_me.model.dto.event.EventFullDto;
+import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
