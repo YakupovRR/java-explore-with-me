@@ -1,4 +1,4 @@
-package ru.practicum.explore_with_me.service.web_сlient;
+package ru.practicum.explore_with_me;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
