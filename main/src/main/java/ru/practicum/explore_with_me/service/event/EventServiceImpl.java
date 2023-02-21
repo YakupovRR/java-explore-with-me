@@ -209,7 +209,7 @@ public class EventServiceImpl implements EventService {
 
         List<EventFullDto> fullDtos = events.stream().map(eventMapper::toFullDto).collect(Collectors.toList());
         webClient.addToStatistic(httpServletRequest);
-        ViewStatsDto[] viewStatsDtos = webClient.getFullViews(fullDtos.toArray(new EventFullDto[0]));
+        ViewStatsDto[] viewStatsDtos = webClient.getViews(fullDtos.toArray(new EventDto[0]));
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
             fullDtos.stream()

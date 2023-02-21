@@ -61,27 +61,4 @@ public class WebClient {
         }
         return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
     }
-
-    public ViewStatsDto[] getShortViews(EventShortDto[] dtos) {
-        StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
-        for (int i = 0; i < dtos.length; i++) {
-            if (i > 0 && i < dtos.length - 1) {
-                sb.append(",");
-            }
-            sb.append("/events/").append(dtos[i].getId());
-        }
-        return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
-    }
-
-    public ViewStatsDto[] getFullViews(EventFullDto[] dtos) {
-        StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
-        for (int i = 0; i < dtos.length; i++) {
-            if (i > 0 && i < dtos.length - 1) {
-                sb.append(",");
-            }
-            sb.append("/events/").append(dtos[i].getId());
-        }
-        return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
-    }
-
 }
