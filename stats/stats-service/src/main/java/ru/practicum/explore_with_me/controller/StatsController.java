@@ -6,10 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.explore_with_me.model.HitDto;
 import ru.practicum.explore_with_me.mapper.Mapper;
 import ru.practicum.explore_with_me.model.ViewStats;
 import ru.practicum.explore_with_me.service.StatsService;
+import ru.practicum.stats.dto.HitDto;
 
 import java.util.List;
 

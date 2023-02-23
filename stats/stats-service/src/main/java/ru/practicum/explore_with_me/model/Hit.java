@@ -1,5 +1,6 @@
 package ru.practicum.explore_with_me.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 public class Hit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +23,4 @@ public class Hit {
     private String ip;
     private LocalDateTime timestamp;
 
-    public Hit(Long id, String app, String uri, String ip, LocalDateTime timestamp) {
-        this.id = id;
-        this.app = app;
-        this.uri = uri;
-        this.ip = ip;
-        this.timestamp = timestamp;
-    }
 }

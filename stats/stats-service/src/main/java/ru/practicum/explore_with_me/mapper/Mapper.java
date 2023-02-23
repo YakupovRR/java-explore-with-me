@@ -2,7 +2,8 @@ package ru.practicum.explore_with_me.mapper;
 
 import org.springframework.stereotype.Component;
 import ru.practicum.explore_with_me.model.Hit;
-import ru.practicum.explore_with_me.model.HitDto;
+import ru.practicum.stats.dto.HitDto;
+
 
 @Component
 public class Mapper {
