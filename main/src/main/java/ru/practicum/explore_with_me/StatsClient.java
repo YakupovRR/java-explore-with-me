@@ -15,14 +15,14 @@ import java.time.LocalDateTime;
 
 @Component
 @Slf4j
-public class WebClient {
+public class StatsClient {
 
     private final RestTemplate restTemplate;
     private final String statUrl;
 
     private final String appName;
 
-    public WebClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${APP}") String appName) {
+    public StatsClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${APP}") String appName) {
         this.restTemplate = restTemplate;
         this.statUrl = statUrl;
         this.appName = appName;
