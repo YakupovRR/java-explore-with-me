@@ -267,6 +267,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public List<EventDto> getEventByUser(long id, Integer from, Integer size) {
+
         Pageable pageable = PageRequest.of(from, size);
         List<Event> events = eventRepository.findAllByInitiatorId(id, pageable).getContent();
         List<EventDto> dtos = events.stream()
