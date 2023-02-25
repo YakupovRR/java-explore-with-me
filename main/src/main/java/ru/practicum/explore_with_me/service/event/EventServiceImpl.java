@@ -214,6 +214,7 @@ public class EventServiceImpl implements EventService {
         List<EventsCountConfirmed> countsConfirm = getConfirmed(events);
 
         List<EventFullDto> fullDtos = events.stream().map(eventMapper::toFullDto).collect(Collectors.toList());
+        statsClient.addToStatistic(httpServletRequest);
         List<Long> dtosId = new ArrayList<>();
         for (EventFullDto i : fullDtos) {
             dtosId.add(i.getId());
@@ -262,6 +263,7 @@ public class EventServiceImpl implements EventService {
                 .orElseThrow(() -> new NotFoundException(HttpStatus.NOT_FOUND)));
 
         dto.setViews(statsClient.findView(id));
+        statsClient.addToStatistic(httpServletRequest);
         dto.setConfirmedRequests(requestRepository.getCountConfirmed(id));
         return dto;
     }
