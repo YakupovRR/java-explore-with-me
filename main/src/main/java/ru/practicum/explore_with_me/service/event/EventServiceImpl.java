@@ -215,8 +215,7 @@ public class EventServiceImpl implements EventService {
         statsClient.addToStatistic(httpServletRequest);
         List<Long> dtosId = new ArrayList<>();
         for (EventFullDto i : fullDtos) {
-            dtosId.add(i.getId());
-        }
+            dtosId.add(i.getId());        }
         ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
