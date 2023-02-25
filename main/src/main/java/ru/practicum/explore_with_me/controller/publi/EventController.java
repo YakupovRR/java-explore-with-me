@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.StatsClient;
 import ru.practicum.explore_with_me.model.dto.event.EventDto;
 import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
 import ru.practicum.explore_with_me.service.event.EventService;
@@ -22,8 +21,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EventController {
     private final EventService eventService;
-
-    private final StatsClient statsClient;
 
     @GetMapping("/events")
     public List<EventShortDto> getEventsPublic(@RequestParam(required = false) String text,
@@ -46,14 +43,12 @@ public class EventController {
 
         List<EventShortDto> shortDtos = eventService.getEventsPublic(text, categories, paid, rangeStart, rangeEnd,
                 onlyAvailable, sort, from, size, httpServletRequest);
-        statsClient.hit(httpServletRequest);
         log.info("Получен Get запрос к эндпоинту events");
         return shortDtos;
     }
 
     @GetMapping("/events/{id}")
     public EventDto getEventById(@PathVariable long id, HttpServletRequest httpServletRequest) {
-        statsClient.hit(httpServletRequest);
         log.info("Получен Get запрос к эндпоинту events/" + id);
         return eventService.getEventById(id, httpServletRequest);
     }
