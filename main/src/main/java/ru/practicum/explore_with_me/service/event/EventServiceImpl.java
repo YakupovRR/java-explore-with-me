@@ -30,7 +30,7 @@ import ru.practicum.explore_with_me.repository.CategoryRepository;
 import ru.practicum.explore_with_me.repository.EventRepository;
 import ru.practicum.explore_with_me.repository.RequestRepository;
 import ru.practicum.explore_with_me.repository.UserRepository;
-//import ru.practicum.stats.dto.ViewStatsDto;
+import ru.practicum.stats.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.ResultSet;
