@@ -24,13 +24,13 @@ import ru.practicum.explore_with_me.model.event.Event;
 import ru.practicum.explore_with_me.model.event.EventState;
 import ru.practicum.explore_with_me.model.event.EventsCountConfirmed;
 import ru.practicum.explore_with_me.model.entity.QEvent;
-import ru.practicum.explore_with_me.model.dto.*;
 import ru.practicum.explore_with_me.model.mapper.EventMapper;
 import ru.practicum.explore_with_me.repository.CategoryRepository;
 import ru.practicum.explore_with_me.repository.EventRepository;
 import ru.practicum.explore_with_me.repository.RequestRepository;
 import ru.practicum.explore_with_me.repository.UserRepository;
 import ru.practicum.explore_with_me.WebClient;
+import ru.practicum.stats.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.ResultSet;
@@ -172,6 +172,8 @@ public class EventServiceImpl implements EventService {
                     .filter(e -> Objects.equals(e.getId(), viewId))
                     .forEach(e -> e.setViews(Math.toIntExact(view.getHits())));
         }
+
+
 
         for (EventsCountConfirmed eventsCount : countsConfirm) {
             dtos.stream().filter(eventDto -> eventDto.getId().equals(eventsCount.getId()))

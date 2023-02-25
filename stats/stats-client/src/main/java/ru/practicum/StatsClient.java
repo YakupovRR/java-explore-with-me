@@ -54,4 +54,6 @@ public class StatsClient extends BaseClient {
 
         post("/hit", hit);
     }
+
+
 }

@@ -6,6 +6,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import ru.practicum.explore_with_me.model.dto.*;
+import ru.practicum.stats.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
