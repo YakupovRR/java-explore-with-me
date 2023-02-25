@@ -160,7 +160,11 @@ public class EventServiceImpl implements EventService {
         List<EventDto> dtos = events.stream()
                 .map(eventMapper::toDto)
                 .collect(Collectors.toList());
-        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtos.toArray(new EventDto[0]));
+        List<Long> dtosId = new ArrayList<>();
+        for (EventDto i : dtos) {
+            dtosId.add(i.getId());
+        }
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
 
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
@@ -209,7 +213,11 @@ public class EventServiceImpl implements EventService {
 
         List<EventFullDto> fullDtos = events.stream().map(eventMapper::toFullDto).collect(Collectors.toList());
         statsClient.addToStatistic(httpServletRequest);
-        ViewStatsDto[] viewStatsDtos = statsClient.getFullViews(fullDtos.toArray(new EventFullDto[0]));
+        List<Long> dtosId = new ArrayList<>();
+        for (EventFullDto i : fullDtos) {
+            dtosId.add(i.getId());
+        }
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
             fullDtos.stream()
@@ -266,8 +274,11 @@ public class EventServiceImpl implements EventService {
         List<EventDto> dtos = events.stream()
                 .map(eventMapper::toDto)
                 .collect(Collectors.toList());
-
-        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtos.toArray(new EventDto[0]));
+        List<Long> dtosId = new ArrayList<>();
+        for (EventDto i : dtos) {
+            dtosId.add(i.getId());
+        }
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
             dtos.stream()

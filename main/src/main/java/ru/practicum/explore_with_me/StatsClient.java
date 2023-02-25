@@ -12,6 +12,7 @@ import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Component
 @Slf4j
@@ -51,37 +52,14 @@ public class StatsClient {
 
     }
 
-    public ViewStatsDto[] getViews(EventDto[] dtos) {
+    public ViewStatsDto[] getViews(List<Long> dtos) {
         StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
-        for (int i = 0; i < dtos.length; i++) {
-            if (i > 0 && i < dtos.length - 1) {
+        for (int i = 0; i < dtos.size(); i++) {
+            if (i > 0 && i < dtos.size() - 1) {
                 sb.append(",");
             }
-            sb.append("/events/").append(dtos[i].getId());
+            sb.append("/events/").append(dtos.get(i));
         }
         return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
     }
-
-    public ViewStatsDto[] getShortViews(EventShortDto[] dtos) {
-        StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
-        for (int i = 0; i < dtos.length; i++) {
-            if (i > 0 && i < dtos.length - 1) {
-                sb.append(",");
-            }
-            sb.append("/events/").append(dtos[i].getId());
-        }
-        return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
-    }
-
-    public ViewStatsDto[] getFullViews(EventFullDto[] dtos) {
-        StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
-        for (int i = 0; i < dtos.length; i++) {
-            if (i > 0 && i < dtos.length - 1) {
-                sb.append(",");
-            }
-            sb.append("/events/").append(dtos[i].getId());
-        }
-        return restTemplate.getForObject(sb.toString(), ViewStatsDto[].class);
-    }
-
 }
