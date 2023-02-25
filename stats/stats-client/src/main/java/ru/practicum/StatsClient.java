@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 import ru.practicum.stats.dto.HitDto;
@@ -17,7 +18,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Slf4j
-@Service
+@Component
 public class StatsClient extends BaseClient {
 
     private final String application;
