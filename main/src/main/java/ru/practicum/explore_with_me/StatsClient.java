@@ -6,7 +6,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import ru.practicum.explore_with_me.model.dto.*;
-import ru.practicum.stats.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
@@ -14,14 +13,14 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class WebClient {
+public class StatsClient {
 
     private final RestTemplate restTemplate;
     private final String statUrl;
 
     private final String appName;
 
-    public WebClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${APP}") String appName) {
+    public StatsClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${APP}") String appName) {
         this.restTemplate = restTemplate;
         this.statUrl = statUrl;
         this.appName = appName;
@@ -38,7 +37,17 @@ public class WebClient {
         restTemplate.postForObject(url, request, HitDto.class);
     }
 
+    public Integer findView(Long eventId) {
+        ViewStatsDto[] views = restTemplate.getForObject(statUrl + "/stats?uris=/events/"
+                + eventId.toString(), ViewStatsDto[].class);
+        if (views != null) {
+            if (views.length > 0) {
+                return views[0].getHits().intValue();
+            }
+        }
+        return null;
 
+    }
 
     public ViewStatsDto[] getViews(List<Long> dtos) {
         StringBuilder sb = new StringBuilder(statUrl + "/stats?uris=");
