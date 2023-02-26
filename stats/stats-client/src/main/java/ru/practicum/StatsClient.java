@@ -10,7 +10,6 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 import ru.practicum.stats.dto.HitDto;
-import ru.practicum.stats.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.http.HttpClient;
