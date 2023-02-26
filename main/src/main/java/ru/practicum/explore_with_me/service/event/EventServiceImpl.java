@@ -13,7 +13,6 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
-import ru.practicum.Client;
 import ru.practicum.explore_with_me.exception.ConflictException;
 import ru.practicum.explore_with_me.exception.NotFoundException;
 import ru.practicum.explore_with_me.model.*;
@@ -54,8 +53,6 @@ public class EventServiceImpl implements EventService {
     private final RequestRepository requestRepository;
 
     private final WebClient statsClient;
-
-    private final Client client;
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -167,7 +164,7 @@ public class EventServiceImpl implements EventService {
         for (EventDto i : dtos) {
             dtosId.add(i.getId());
         }
-        List<ViewStatsDto> viewStatsDtos = client.getViews(dtosId);
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
 
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
@@ -217,11 +214,12 @@ public class EventServiceImpl implements EventService {
         List<EventsCountConfirmed> countsConfirm = getConfirmed(events);
 
         List<EventFullDto> fullDtos = events.stream().map(eventMapper::toFullDto).collect(Collectors.toList());
+        statsClient.addToStatistic(httpServletRequest);
         List<Long> dtosId = new ArrayList<>();
         for (EventFullDto i : fullDtos) {
             dtosId.add(i.getId());
         }
-        List<ViewStatsDto> viewStatsDtos = client.getViews(dtosId);
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
             fullDtos.stream()
@@ -264,7 +262,8 @@ public class EventServiceImpl implements EventService {
         EventDto dto = eventMapper.toDto(eventRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(HttpStatus.NOT_FOUND)));
 
-        dto.setViews(client.findView(id));
+        dto.setViews(statsClient.findView(id));
+        statsClient.addToStatistic(httpServletRequest);
         dto.setConfirmedRequests(requestRepository.getCountConfirmed(id));
         return dto;
     }
@@ -281,7 +280,7 @@ public class EventServiceImpl implements EventService {
         for (EventDto i : dtos) {
             dtosId.add(i.getId());
         }
-        List<ViewStatsDto> viewStatsDtos = client.getViews(dtosId);
+        ViewStatsDto[] viewStatsDtos = statsClient.getViews(dtosId);
         for (ViewStatsDto view : viewStatsDtos) {
             Long viewId = Long.parseLong(view.getUri().substring(view.getUri().lastIndexOf("/") + 1));
             dtos.stream()
@@ -402,7 +401,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventUserDto getUserEvent(long userId, long eventId) {
         EventUserDto dto = eventMapper.toUserDto(eventRepository.findByIdAndInitiatorId(eventId, userId));
-        dto.setViews(client.findView(eventId));
+        dto.setViews(statsClient.findView(eventId));
         dto.setConfirmedRequests(requestRepository.getCountConfirmed(eventId));
         return dto;
     }

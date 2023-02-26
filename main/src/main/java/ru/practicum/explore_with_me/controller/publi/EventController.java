@@ -2,11 +2,9 @@ package ru.practicum.explore_with_me.controller.publi;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.Client;
 import ru.practicum.explore_with_me.model.dto.event.EventDto;
 import ru.practicum.explore_with_me.model.dto.event.EventShortDto;
 import ru.practicum.explore_with_me.service.event.EventService;
@@ -24,12 +22,7 @@ import java.util.List;
 public class EventController {
     private final EventService eventService;
 
-    private final Client client;
-
-    @Value("${app-name}")
-    private String appName;
-
-     @GetMapping("/events")
+    @GetMapping("/events")
     public List<EventShortDto> getEventsPublic(@RequestParam(required = false) String text,
                                                @RequestParam(required = false) Integer[] categories,
                                                @RequestParam(required = false) Boolean paid,
@@ -50,8 +43,6 @@ public class EventController {
 
         List<EventShortDto> shortDtos = eventService.getEventsPublic(text, categories, paid, rangeStart, rangeEnd,
                 onlyAvailable, sort, from, size, httpServletRequest);
-        client.addToStatistic(appName, httpServletRequest);
-
         log.info("Получен Get запрос к эндпоинту events");
         return shortDtos;
     }
@@ -59,7 +50,6 @@ public class EventController {
     @GetMapping("/events/{id}")
     public EventDto getEventById(@PathVariable long id, HttpServletRequest httpServletRequest) {
         log.info("Получен Get запрос к эндпоинту events/" + id);
-        client.addToStatistic(appName, httpServletRequest);
         return eventService.getEventById(id, httpServletRequest);
     }
 
