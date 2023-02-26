@@ -48,7 +48,6 @@ public class WebClient {
             }
         }
         return null;
-
     }
 
     public ViewStatsDto[] getViews(List<Long> dtos) {
