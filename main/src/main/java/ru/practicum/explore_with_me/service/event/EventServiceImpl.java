@@ -216,7 +216,7 @@ public class EventServiceImpl implements EventService {
         List<EventsCountConfirmed> countsConfirm = getConfirmed(events);
 
         List<EventFullDto> fullDtos = events.stream().map(eventMapper::toFullDto).collect(Collectors.toList());
-        webClient.addToStatistic(httpServletRequest);
+        statsClient.addToStatistic(httpServletRequest);
         List<Long> dtosId = new ArrayList<>();
         for (EventFullDto i : fullDtos) {
             dtosId.add(i.getId());
