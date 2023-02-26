@@ -1,11 +1,10 @@
-package ru.practicum.explore_with_me;
+package ru.practicum;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import ru.practicum.explore_with_me.model.dto.*;
 import ru.practicum.stats.dto.HitDto;
 import ru.practicum.stats.dto.ViewStatsDto;
 
