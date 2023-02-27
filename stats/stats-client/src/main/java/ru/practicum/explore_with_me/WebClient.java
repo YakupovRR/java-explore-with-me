@@ -21,7 +21,7 @@ public class WebClient {
 
     private final String appName;
 
-    public WebClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${APP}") String appName) {
+    public WebClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${app}") String appName) {
         this.restTemplate = restTemplate;
         this.statUrl = statUrl;
         this.appName = appName;
