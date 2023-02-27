@@ -2,7 +2,7 @@ package ru.practicum.explore_with_me.mapper;
 
 import org.springframework.stereotype.Component;
 import ru.practicum.explore_with_me.model.Hit;
-import ru.practicum.stats.dto.HitDto;
+import ru.practicum.explore_with_me.dto.HitDto;
 
 
 @Component

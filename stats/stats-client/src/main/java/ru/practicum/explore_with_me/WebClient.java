@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import ru.practicum.stats.dto.HitDto;
-import ru.practicum.stats.dto.ViewStatsDto;
+import ru.practicum.explore_with_me.dto.HitDto;
+import ru.practicum.explore_with_me.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

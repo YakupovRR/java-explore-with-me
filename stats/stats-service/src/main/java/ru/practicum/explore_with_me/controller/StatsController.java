@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.practicum.explore_with_me.mapper.Mapper;
 import ru.practicum.explore_with_me.model.ViewStats;
 import ru.practicum.explore_with_me.service.StatsService;
-import ru.practicum.stats.dto.HitDto;
+import ru.practicum.explore_with_me.dto.HitDto;
 
 import java.util.List;
 
