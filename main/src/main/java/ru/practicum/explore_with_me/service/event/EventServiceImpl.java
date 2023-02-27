@@ -29,7 +29,7 @@ import ru.practicum.explore_with_me.repository.CategoryRepository;
 import ru.practicum.explore_with_me.repository.EventRepository;
 import ru.practicum.explore_with_me.repository.RequestRepository;
 import ru.practicum.explore_with_me.repository.UserRepository;
-import ru.practicum.explore_with_me.WebClient;
+import ru.practicum.explore_with_me.StatClient;
 import ru.practicum.explore_with_me.dto.ViewStatsDto;
 
 import javax.servlet.http.HttpServletRequest;
@@ -52,7 +52,7 @@ public class EventServiceImpl implements EventService {
 
     private final RequestRepository requestRepository;
 
-    private final WebClient statsClient;
+    private final StatClient statsClient;
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 

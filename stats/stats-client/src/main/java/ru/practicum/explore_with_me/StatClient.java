@@ -14,14 +14,14 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class WebClient {
+public class StatClient {
 
     private final RestTemplate restTemplate;
     private final String statUrl;
 
     private final String appName;
 
-    public WebClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${app}") String appName) {
+    public StatClient(RestTemplate restTemplate, @Value("${stats-server.url}") String statUrl, @Value("${app}") String appName) {
         this.restTemplate = restTemplate;
         this.statUrl = statUrl;
         this.appName = appName;
